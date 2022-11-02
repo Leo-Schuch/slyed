@@ -1,17 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 import IconsHeader from "../IconsHeader";
 import Logo from "../Logo";
 import OptionList from "../OptionsList";
-import './style.css'
 
 const Header = () => {
   return (
-    <header className="App-header">
+    <HeaderStyle>
       <Logo />
       <OptionList />
       <IconsHeader />
-    </header>
+    </HeaderStyle>
   );
 };
 
 export default Header;
+
+const HeaderStyle = styled.div `
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+`

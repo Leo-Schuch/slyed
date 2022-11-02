@@ -1,21 +1,27 @@
 import React from "react";
+import styled from "styled-components";
 import logo from '../../imagens/logo.svg'
-import './style.css'
 
  const Logo = () => {
   return (
-    <div className="logo">
-      <img 
-      className="logo-img"
+    <LogoContainer>
+      <LogoImg 
       src={logo} 
-      alt="logo">
-        
-      </img>
-      <p>
-        <strong>Books</strong>New
-      </p>
-    </div>
+      alt="logo"/>       
+      <p><strong>Books</strong>New</p>
+    </LogoContainer>
   );
 };
 
 export default Logo
+
+const LogoContainer = styled.div `
+  display: flex;
+    font-size: 30px;
+    gap: 10px;
+`
+
+const LogoImg = styled.img`
+  margin-right: 10px;
+`
+

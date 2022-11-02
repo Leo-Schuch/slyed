@@ -1,17 +1,34 @@
 import React from "react";
-import './style.css'
+import styled from "styled-components";
 
 const OptionList = () => {
   const textOptions = ["Categorias", "Favoritos", "Minha Estante"];
   return (
-    <ul className="options">
+    <Options>
       {textOptions.map((text) => (
-        <li className="option">
+        <Option>
           <p>{text}</p>
-        </li>
+        </Option>
       ))}
-    </ul>
+    </Options>
   );
 };
 
 export default OptionList;
+
+const Options = styled.ul`
+  display: flex;
+`;
+
+const Option = styled.li`
+  font-size: 16px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+`;
